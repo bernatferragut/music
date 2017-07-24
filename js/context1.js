@@ -7,7 +7,6 @@ osc.type = "sin"
 osc.connect(context.destination);
 //osc.start();
 //osc.stop();
-
 //select buttons
 var startBtn = document.getElementById('start');
 console.log(startBtn);
