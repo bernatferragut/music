@@ -2,7 +2,7 @@ window.onload = function() {
     // declare vars
     var context = new window.AudioContext(),
         osc = context.createOscillator(),
-        vol = context.createGain(),
+        vol = context.createGain()
         volControl = document.getElementById("volume");
     // osc => vol
      osc.frequency.value = 440;
@@ -18,5 +18,15 @@ window.onload = function() {
     //start osc
     osc.start();
     osc.stop();
+
+    // SLIDER
+    // Instantiate a slider
+    var mySlider = $("input.slider").slider();
+    // Call a method on the slider
+    var value = mySlider.slider('getValue');
+    
 }
+
+
+
 

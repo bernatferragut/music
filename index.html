@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- TITLE -->
+    <title>WEBAUDIOAPI-MZK</title>
 </head>
-<body>
-    <h1>WEBAUDIO TEST</h1>
 
-    <button id="start">START</button>
-    <button id="stop">STOP</button>
-    <input 
-        type="range" 
-        min="0" 
-        max="1" 
-        step="0.01" 
-        value="1" 
-        id="volume"
-    />
+<body>
+    <div class="top">
+        <div class="container1">
+            <h1 id="title">WEBAUDIO TEST</h1>
+        </div>
+        <div class="container2">
+            <div>
+                <button id="start" type="button" class="btn btn-outline-success btn-lg">START</button>
+            </div>
+            <div>
+                <button id="stop" type="button" class="btn btn-outline-danger btn-lg">STOP</button>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <input id="volume" type="range" min="0" max="1" step="1"/>
+            </div>
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <!-- Tether -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <!-- slider -->
+    <script ="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
+    <!-- JS -->
     <script src="context2.js"></script>
 </body>
+
 </html>
