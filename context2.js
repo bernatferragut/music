@@ -19,12 +19,27 @@ window.onload = function() {
     osc.start();
     osc.stop();
 
-    // SLIDER
-    // Instantiate a slider
-    var mySlider = $("input.slider").slider();
-    // Call a method on the slider
-    var value = mySlider.slider('getValue');
-    
+    // RANGE SLIDER
+    // select
+var $element = $('input[type="range"]');
+
+$element
+  .rangeslider({
+    polyfill: false,
+    onInit: function() {
+      var $handle = $('.rangeslider__handle', this.$range);
+      updateHandle($handle[0], this.value);
+    }
+  })
+  .on('input', function(e) {
+    var $handle = $('.rangeslider__handle', e.target.nextSibling);
+    updateHandle($handle[0], this.value);
+  });
+
+function updateHandle(el, val) {
+  el.textContent = val;
+}
+
 }
 
 
